@@ -45,7 +45,7 @@ export const weatherReducer = createReducer(
     )
   })),
 
-  // (Optional) Log or ignore refreshCityFailure
+  
   on(WeatherActions.refreshCityFailure, (state, { error }) => ({
     ...state,
     error
