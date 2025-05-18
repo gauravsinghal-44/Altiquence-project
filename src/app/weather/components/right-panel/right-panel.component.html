@@ -1,0 +1,46 @@
+<div  class="right-panel">
+  <div *ngIf="selectedCity$ | async as selectedCity;else noData;">
+    <div class="flex flex-space-between ">
+        <h2>{{selectedCity$ | async}}</h2>
+        <button type="button" class="actions-button-n" (click)="refreshCity(selectedCity)"><i class="fas fa-refresh icon-col-primary font-15"></i></button>
+    </div>
+    
+    <ng-container *ngIf="todayForecast$ | async as today; else noToday">
+      <div class="flex gap-10">
+        <div class="image-container day-forecast mb-10">
+            <img src="http://openweathermap.org/img/wn/{{today.icon}}@2x.png" alt="weather icon" />
+        </div>
+        <div class="forecast-data">
+            <div>{{ today.temp }} °C</div>
+            <div class="desc-text">{{ today.description | titlecase}}</div>
+            <div>Wind: {{ today.windSpeed }} m/s, {{ today.windDeg }}°</div>
+            <div>Pressure: {{ today.pressure }} hPa</div>
+        </div>
+        
+        
+      </div>
+    </ng-container>
+    <ng-template #noToday>
+      <p>No data for today.</p>
+    </ng-template>
+  
+    <h2>5-Day Forecast</h2>
+    <ng-container *ngIf="fiveDayForecast$ | async as fiveDay; else noForecast">
+      <div class="flex flex-space-between w-500">
+        <div class="day-forecast" *ngFor="let day of fiveDay">
+          <div> {{ day.date |date: 'dd' }}</div>
+          <div>{{ day.date | date: 'EEE'}}</div>
+          <img src="http://openweathermap.org/img/wn/{{day.icon}}@2x.png" height="50px" width="50px" alt="weather icon" />
+          <div class="temp-text">{{ day.temp }} °C</div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #noForecast>
+      <p>No 5-day forecast available.</p>
+    </ng-template>
+  </div>
+  </div>
+
+  <ng-template  #noData>
+    <p>No data for today.</p>
+  </ng-template>

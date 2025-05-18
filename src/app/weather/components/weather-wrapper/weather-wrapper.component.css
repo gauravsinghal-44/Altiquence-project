@@ -1,0 +1,14 @@
+    .sidebar {
+    width: 35%;
+    
+  }
+  
+  .right-panel {
+    width: 65%;
+  }
+
+  .heading-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 8px;
+  }

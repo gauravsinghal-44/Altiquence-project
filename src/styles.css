@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+.flex{
+    display: flex;
+}
+
+.flex-space-between{
+    justify-content: space-between;
+}
+
+.flex-space-around{
+    justify-content: space-around;
+}
+
+.flex-align-center{
+    align-items: center;
+}
+
+.padding-10{
+padding: 10px;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.badge{
+    background-color: rgb(92, 88, 88);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+}
+
+.btn-danger{
+    color: #fff;
+    background-color: #d9534f;
+    border: 1px solid #d43f3a;
+    
+}
+
+.icon-col-primary{
+    color: #337ab7;
+}
+
+.icon-col-danger{
+    color: #d9534f;
+}
+
+.action-button{
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.error{
+    color: red;
+}
+
+.font-14{
+    font-size: 14px;
+}
+ .text-gray{
+    color: #777777;
+ } 
+ .fw-600{
+    font-weight: 600;
+ }
+
+ .locations{
+    list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.locations li {
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .input-text{
+    height: 24px;
+    border: 1px solid #eeeeee;
+    padding: 6px 3px;
+    width: 100%;
+  }
+
+  .actions-button-n {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .w-500{
+    width: 500px;
+  }
+
+  .font-15{
+    font-size: 15px;
+  }

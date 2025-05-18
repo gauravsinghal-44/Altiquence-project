@@ -1,0 +1,14 @@
+.list-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #eeeeee;
+    box-shadow: 3px 3px 10px 1px #eeeeee;
+    margin-bottom: 10px;
+}
+
+.counter-section{
+    padding: 10px 20px 20px 20px;
+    width: 400px;
+    margin-top: 20px;
+}

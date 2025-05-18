@@ -1,0 +1,36 @@
+.sidebar{
+    height: calc(100vh - 169px);
+    padding: 20px 20px 20px 20px;
+    border-right: 1px solid #eeeeee;
+    box-shadow: 4px 0px 7px 5px #eeeeee;
+}
+
+  .city-info {
+    flex: 1; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .small-heading::after{
+  content: "";
+  display: block;
+  width: 100%;      
+  height: 1px; 
+  background-color: #cccccc;
+  margin-top: 8px;
+  }
+
+  .button-container{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .plus-icon-btn{
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #337ab7;
+  }

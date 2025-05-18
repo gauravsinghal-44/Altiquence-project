@@ -1,0 +1,10 @@
+<div class="nav">
+    <div class="nav-child">
+        <a routerLink="/counter" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Counter App</a>
+         <span class="badge">{{counterCount$ | async}}</span>
+    </div>
+    <div class="nav-child">
+        <a routerLink="/vatavaran" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Weather App</a>
+    </div>
+   
+</div>

@@ -1,0 +1,17 @@
+
+<div class="counter-section">
+  <div class="main-actions mb-10 flex gap-10">
+    <button class="action-button btn-primary" type="button" (click)="resetAllCounters()">Reset</button>
+    <button class="action-button btn-primary" type="button" (click)="addNewCounter()">Add Counter</button>
+  </div>
+  
+  
+  <div class="list-container" *ngFor="let counter of counters$ | async">
+      <span class="badge">{{ counter.count }}</span>
+    <button class="action-button btn-primary" type="button" (click)="incrementCounter(counter.id)">Increment</button>
+    <button class="action-button btn-primary" type="button" (click)="decrementCounter(counter.id)" [disabled]="counter.count === 0">Decrement</button>
+    <button class="action-button btn-danger" type="button" (click)="deleteCounter(counter.id)">Delete</button>
+  </div>
+</div>
+
+
